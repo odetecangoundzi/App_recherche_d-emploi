@@ -1,0 +1,56 @@
+{
+  "name": "career-ops",
+  "version": "1.0.0",
+  "description": "AI-powered job search pipeline built on Claude Code",
+  "scripts": {
+    "test": "node --test test/statuses.test.mjs test/tracker-core.test.mjs test/report-core.test.mjs test/verify-ats.test.mjs test/ats-detect.test.mjs test/cv-impact.test.mjs test/generate-docx.test.mjs test/coverage-matrix.test.mjs",
+    "test:all": "node test-all.mjs",
+    "doctor": "node doctor.mjs",
+    "verify": "node verify-pipeline.mjs",
+    "normalize": "node normalize-statuses.mjs",
+    "dedup": "node dedup-tracker.mjs",
+    "merge": "node merge-tracker.mjs",
+    "pdf": "node generate-pdf.mjs",
+    "docx": "node generate-docx.mjs",
+    "sync-check": "node cv-sync-check.mjs",
+    "update:check": "node update-system.mjs check",
+    "update": "node update-system.mjs apply",
+    "rollback": "node update-system.mjs rollback",
+    "liveness": "node check-liveness.mjs",
+    "ats": "node verify-ats.mjs",
+    "ats:detect": "node ats-detect.mjs",
+    "impact": "node cv-impact.mjs",
+    "coverage": "node coverage-matrix.mjs",
+    "scan": "node scan.mjs",
+    "gemini:eval": "node gemini-eval.mjs",
+    "interview": "node interview-sim.mjs",
+    "story": "node generate-story.mjs",
+    "outreach": "node generate-outreach.mjs",
+    "mitigate": "node generate-mitigation.mjs",
+    "theme": "node switch-theme.mjs",
+    "compile": "node compile-cv.mjs"
+  },
+  "keywords": [
+    "ai",
+    "job-search",
+    "claude-code",
+    "career",
+    "automation"
+  ],
+  "author": "Santiago Fernández de Valderrama <hi@santifer.io> (https://santifer.io)",
+  "homepage": "https://santifer.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santifer/career-ops"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.1",
+    "playwright": "^1.58.1"
+  }
+}
